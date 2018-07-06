@@ -1,23 +1,20 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id="app" class="container">
+    <wiki-header />
     <router-view/>
   </div>
 </template>
 
 <script>
+/**
+ * Internal dependencies
+ */
+import WikiHeader from '@/components/Header';
+
 export default {
   name: 'App',
+  components: {
+    WikiHeader,
+  },
 };
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
