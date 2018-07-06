@@ -26,6 +26,7 @@ export default {
     align-items: center;
     justify-content: center;
     font-size: 24px;
+    height: 80px;
     padding: 10px;
     font-weight: bold;
     font-family: 'Droid Sans Mono', monospace;

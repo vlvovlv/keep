@@ -3,7 +3,9 @@
     <wiki-header />
     <div class="wiki-container">
       <wiki-sidebar />
-      <router-view />
+      <div class="wiki-box">
+        <router-view />
+      </div>
     </div>
     <wiki-footer />
   </div>
@@ -26,3 +28,19 @@ export default {
   },
 };
 </script>
+
+<style lang="less" scoped>
+  @import "./styles/vars.less";
+
+  .wiki-container {
+    display: flex;
+    position: relative;
+    min-height: 555px;
+    padding-left: 333px;
+
+    .wiki-box {
+      width: 100%;
+      border-left: 1px solid cyan;
+    }
+  }
+</style>
