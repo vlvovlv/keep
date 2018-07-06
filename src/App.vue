@@ -1,7 +1,11 @@
 <template>
   <div id="app" class="container">
     <wiki-header />
-    <router-view/>
+    <div class="wiki-container">
+      <wiki-sidebar />
+      <router-view />
+    </div>
+    <wiki-footer />
   </div>
 </template>
 
@@ -10,11 +14,15 @@
  * Internal dependencies
  */
 import WikiHeader from '@/components/Header';
+import WikiFooter from '@/components/Footer';
+import WikiSidebar from '@/components/Sidebar';
 
 export default {
   name: 'App',
   components: {
     WikiHeader,
+    WikiFooter,
+    WikiSidebar,
   },
 };
 </script>

@@ -29,7 +29,7 @@ export default {
     padding: 10px;
     font-weight: bold;
     font-family: 'Droid Sans Mono', monospace;
-    border-bottom: 1px solid #d6d6d6;
+    border-bottom: 1px solid @border;
     flex-wrap: nowrap;
 
     .logo {
