@@ -31,6 +31,7 @@ export default {
 
 <style lang="less" scoped>
   @import "./styles/vars.less";
+  @import "./styles/mixins.less";
 
   .wiki-container {
     display: flex;
@@ -38,9 +39,17 @@ export default {
     min-height: 555px;
     padding-left: 333px;
 
+    .m({
+      padding-left: 0;
+    });
+
     .wiki-box {
       width: 100%;
       border-left: 1px solid cyan;
+
+      .m({
+        border-left: 0;
+      });
     }
   }
 </style>

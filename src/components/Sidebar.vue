@@ -12,12 +12,12 @@
       </li>
       <li>
         <a href="#">
-          JavaScript()
+          CSS(3)
         </a>
       </li>
       <li>
         <a href="#">
-          JavaScript()
+          HTML(5)
         </a>
       </li>
     </ul>
@@ -32,6 +32,7 @@ export default {
 
 <style lang="less" scoped>
   @import '../styles/vars.less';
+  @import "../styles/mixins.less";
 
   .wiki-sidebar {
     font-family: 'Droid Sans Mono', monospace;
@@ -41,6 +42,11 @@ export default {
     width: 333px;
     overflow-x: hidden;
     padding: 20px 0;
+
+    .m({
+      position: fixed;
+      display: none;
+    });
 
     h2 {
       color: @dark-green;

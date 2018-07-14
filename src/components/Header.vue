@@ -8,7 +8,7 @@
       <span class="cyan">o</span>
       <span class="white">,</span>
     </div>
-    <h1 class="title">Use code to speak.</h1>
+    <h1 class="title">I use code to speak.</h1>
   </header>
 </template>
 
@@ -20,6 +20,7 @@ export default {
 
 <style lang="less" scoped>
   @import "../styles/vars.less";
+  @import "../styles/mixins.less";
 
   .wiki-header {
     display: flex;
@@ -33,6 +34,10 @@ export default {
     border-bottom: 1px solid @border;
     flex-wrap: nowrap;
 
+    .m({
+      font-size: 16px;
+    });
+
     .logo {
       display: flex;
     }
@@ -43,6 +48,10 @@ export default {
       font-size: 24px;
       color: @white;
       white-space: nowrap;
+
+      .m({
+        font-size: 18px;
+      });
 
       &:after {
         content: '';

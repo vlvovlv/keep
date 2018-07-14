@@ -1,6 +1,8 @@
 <template>
   <div class="wiki-footer">
-    <span class="cyan">print</span>
+    <span class="cyan">console</span>
+    <span class="white">.</span>
+    <span class="green">log</span>
     <span class="white">(</span>
     <span class="orange">"</span>
     <span class="purple">I ❤ coding</span>
@@ -26,5 +28,6 @@ export default {
     padding: 40px;
     font-size: 16px;
     border-top: 1px solid @border;
+    white-space: nowrap;
   }
 </style>
