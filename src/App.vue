@@ -1,13 +1,13 @@
 <template>
   <div id="app" class="container">
-    <wiki-header />
+    <wiki-header></wiki-header>
     <div class="wiki-container">
-      <wiki-sidebar />
+      <wiki-sidebar></wiki-sidebar>
       <div class="wiki-box">
-        <router-view />
+        <router-view></router-view>
       </div>
     </div>
-    <wiki-footer />
+    <wiki-footer></wiki-footer>
   </div>
 </template>
 

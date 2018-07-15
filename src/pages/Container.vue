@@ -11,8 +11,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.wiki-content-container {
-  width: 100%;
-  padding: 40px 15px;
-}
+  @import '../styles/vars.less';
+
+  .wiki-content-container {
+    width: 100%;
+    padding: 40px 15px;
+    color: @white;
+  }
 </style>

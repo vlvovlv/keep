@@ -2,7 +2,7 @@
   <div>
     <li v-for="(menu, index) in menus" :key="menu.name">
       <router-link class="menu-link" :to="`${pp}/${menu.path}`" v-if="menu.children.length === 0">
-        {{menu.name}}()
+        {{menu.name}}
       </router-link>
       <div class="menu-text" v-else>
         <span>{{pi}}-{{index + 1}}.</span> {{menu.name}}

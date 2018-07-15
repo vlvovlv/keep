@@ -5,7 +5,7 @@
       ================================================================================
     </div>
     <ul class="menu">
-      <sub-menu :menus="menus" pi="1" pp="/"></sub-menu>
+      <sub-menu :menus="menus" pi="1" pp=""></sub-menu>
     </ul>
   </div>
 </template>
