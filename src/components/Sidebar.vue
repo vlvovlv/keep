@@ -36,10 +36,11 @@ export default {
 
   .wiki-sidebar {
     font-family: 'Droid Sans Mono', monospace;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 80px;
     left: 0;
     width: 333px;
+    height: 100%;
     overflow-x: hidden;
     padding: 20px 0;
 
