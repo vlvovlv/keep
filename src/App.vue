@@ -33,20 +33,10 @@ export default {
   @import "./styles/vars.less";
   @import "./styles/mixins.less";
 
-  body,
-  html {
-    height: 100%;
-  }
-
-  #app {
-    height: 100%;
-  }
-
   .wiki-container {
     display: flex;
     position: relative;
     min-height: 555px;
-    padding-left: 333px;
     height: 100%;
 
     .m({

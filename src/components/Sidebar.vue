@@ -5,28 +5,23 @@
       ================================================================================
     </div>
     <ul class="menu">
-      <li>
-        <a href="#">
-          JavaScript()
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          CSS(3)
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          HTML(5)
-        </a>
-      </li>
+      <sub-menu :menus="menus" pi="1" pp="/"></sub-menu>
     </ul>
   </div>
 </template>
 
 <script>
+import menus from '../router/menus';
+import SubMenu from './SubMenu';
+
 export default {
   name: 'WikiSidebar',
+  components: {
+    SubMenu,
+  },
+  created() {
+    this.menus = menus;
+  },
 };
 </script>
 
@@ -36,11 +31,8 @@ export default {
 
   .wiki-sidebar {
     font-family: 'Droid Sans Mono', monospace;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 333px;
-    height: 100%;
+    width: 450px;
+    min-height: 100%;
     overflow-x: hidden;
     padding: 20px 0;
 
@@ -57,52 +49,7 @@ export default {
 
     .split {
       color: @white;
-      margin: 15px 0;
-    }
-
-    .menu {
-      font-size: 18px;
-
-      li a {
-        position: relative;
-        display: block;
-        padding: 15px 15px 15px 20px;
-        margin-bottom: 15px;
-        color: @white;
-
-        &:before {
-          content: '';
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 2px;
-          height: 100%;
-          background-color: @green;
-          transition: all ease 0.5s;
-        }
-
-        &:after {
-          content: '';
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          height: 1px;
-          background-color: @green;
-          transition: all ease 0.5s;
-        }
-
-        &:hover {
-          &:before {
-            height: 0;
-          }
-          &:after {
-            width: 100%;
-          }
-        }
-      }
+      margin: 15px 0 0;
     }
   }
 </style>

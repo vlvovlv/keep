@@ -18,8 +18,8 @@ ${indent}  name: '${route.name}',
 ${indent}  path: '${route.path}',
 ${
   route.component
-  ? indent + '  component: require(\'' + route.component + '\'),'
-  : ''
+  ? indent + '  component: () => import(\'../../wikis/' + route.component + '\'),'
+  : indent + `  component: { template: '<router-view></router-view>' },`
 }
 ${indent}  children: [
 ${indent}    ${gen(route.children, indentNo + 1).trim()}
