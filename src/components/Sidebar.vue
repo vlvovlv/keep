@@ -34,7 +34,7 @@ export default {
     width: 450px;
     min-height: 100%;
     overflow-x: hidden;
-    padding: 20px 0;
+    padding: 10px 0;
 
     .m({
       position: fixed;
@@ -43,13 +43,13 @@ export default {
 
     h2 {
       color: @dark-green;
-      padding: 15px;
+      padding: 10px 10px 0;
       margin: 0;
     }
 
     .split {
       color: @white;
-      margin: 15px 0 0;
+      margin: 15px 0;
     }
   }
 </style>

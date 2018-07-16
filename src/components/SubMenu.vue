@@ -50,12 +50,14 @@ export default {
   @import '../styles/vars.less';
 
   .menu {
-    font-size: 18px;
+    font-size: 16px;
 
     .depth-level1 {
+      font-size: 16px;
       padding-left: 10px + 10px;
 
       &-level2 {
+        font-size: 14px;
         padding-left: 10px + 10px + 10px;
       }
     }
@@ -64,14 +66,14 @@ export default {
     li .menu-text {
       position: relative;
       display: block;
-      padding: 10px 10px 10px 15px;
-      margin-bottom: 15px;
+      padding: 5px 5px 5px 15px;
+      margin-bottom: 10px;
       color: @white;
     }
 
     li .menu-text {
       padding-left: 2px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
 
       span {

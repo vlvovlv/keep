@@ -26,7 +26,7 @@ export default {
     align-items: center;
     justify-content: center;
     padding: 40px;
-    font-size: 16px;
+    font-size: 14px;
     border-top: 1px solid @border;
     white-space: nowrap;
   }
