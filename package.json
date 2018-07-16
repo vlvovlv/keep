@@ -22,6 +22,7 @@
   "dependencies": {
     "@vlvovlv/reset.css": "^1.0.0",
     "fs-extra": "^6.0.1",
+    "markdown-it-vue-demo-block": "^1.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

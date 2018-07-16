@@ -84,6 +84,9 @@ module.exports = {
             options: {
               markdown: {
                 useLineNumbers: true,
+                config: md => {
+                  md.use(require('markdown-it-vue-demo-block')); // eslint-disable-line
+                },
               },
             },
           },
