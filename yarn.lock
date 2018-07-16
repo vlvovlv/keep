@@ -5062,9 +5062,9 @@ markdown-it-table-of-contents@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/markdown-it-table-of-contents/-/markdown-it-table-of-contents-0.4.0.tgz#950541bec9a365a75265f5265a09dc0cb5935909"
 
-markdown-it-vue-demo-block@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/markdown-it-vue-demo-block/-/markdown-it-vue-demo-block-1.0.1.tgz#04810860932c9a86c6bb404aac616b71cd80e46d"
+markdown-it-vue-demo-block@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/markdown-it-vue-demo-block/-/markdown-it-vue-demo-block-1.0.2.tgz#40b9f8f51cf6ddb2a52c6c9e29420ba7e7d4dfd9"
   dependencies:
     cheerio "^1.0.0-rc.2"
     clipboard "^2.0.1"

@@ -14,6 +14,21 @@ const menus = [
       },
     ],
   },
+  {
+    name: 'Vue',
+    path: 'Vue',
+    component: { template: '<router-view></router-view>' },
+    children: [
+      {
+        name: 'test',
+        path: 'test',
+        component: () => import('../../wikis/Vue/test.md'),
+        children: [
+          
+        ],
+      },
+    ],
+  },
 ];
 
 export default menus;
