@@ -1,7 +1,7 @@
 const menus = [
   {
     name: 'Git',
-    path: 'Git',
+    path: 'git',
     component: { template: '<router-view></router-view>' },
     children: [
       {
@@ -16,7 +16,7 @@ const menus = [
   },
   {
     name: 'Vue',
-    path: 'Vue',
+    path: 'vue',
     component: { template: '<router-view></router-view>' },
     children: [
       {

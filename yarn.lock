@@ -7637,7 +7637,7 @@ tr46@^1.0.1:
   dependencies:
     punycode "^2.1.0"
 
-transliteration@^1.6.2:
+transliteration@^1.6.2, transliteration@^1.6.5:
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/transliteration/-/transliteration-1.6.5.tgz#4820c13b8c4901b03855fc352d00100ec72a212d"
   dependencies:

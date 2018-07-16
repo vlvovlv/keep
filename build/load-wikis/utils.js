@@ -1,3 +1,5 @@
+const slugify = require('transliteration').slugify;
+
 exports.sort = function (arr) {
   return arr.sort((a, b) => {
     if (a < b) return -1
@@ -12,7 +14,7 @@ function walk (tree, paths, component) {
   if (!tree[entry]) {
     tree[entry] = {
       name: entry,
-      path: entry,
+      path: slugify(entry),
       children: {},
     };
     if (!paths.length) {
@@ -32,7 +34,7 @@ function flat (tree) {
     const item = tree[entry];
     const i = {
       name: item.name,
-      path: item.path,
+      path: slugify(item.path),
       children: flat(item.children),
     };
     if (item.component) {
