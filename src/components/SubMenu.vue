@@ -62,6 +62,7 @@ export default {
 
 <style lang="less" scoped>
   @import '../styles/vars.less';
+  @import '../styles/mixins.less';
 
   .menu {
     font-size: 16px;
@@ -119,7 +120,10 @@ export default {
         background-color: @green;
         transition: all ease 0.5s;
       }
+    }
+  }
 
+  /deep/ .non-touch li .menu-link {
       &:hover {
         &:before {
           height: 0;
@@ -128,6 +132,5 @@ export default {
           width: 100%;
         }
       }
-    }
   }
 </style>

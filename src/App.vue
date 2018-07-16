@@ -49,6 +49,11 @@ export default {
         this.open = false;
       }
     };
+
+    const touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+    if (!touchsupport) {
+      document.documentElement.className += ' non-touch';
+    }
   },
   methods: {
     handleClose() {
@@ -69,8 +74,8 @@ export default {
     width: 25px;
     height: 25px;
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 28px;
+    right: 2px;
     background: url('./assets/circle.svg') no-repeat center;
     z-index: 1001;
     display: none;
