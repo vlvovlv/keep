@@ -1,6 +1,6 @@
 <template>
   <div class="wiki-content-container">
-    <h1 v-if="showIndex">Hello, world...</h1>
+    <index-page v-if="showIndex"></index-page>
     <transition name="router-anim">
       <router-view></router-view>
     </transition>
@@ -8,8 +8,13 @@
 </template>
 
 <script>
+import IndexPage from '../../README.md';
+
 export default {
   name: 'WikiContentContainer',
+  components: {
+    IndexPage,
+  },
   computed: {
     showIndex() {
       return this.$route.path === '/';
