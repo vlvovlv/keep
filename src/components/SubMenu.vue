@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div :style="{
+    paddingLeft: depth * 10 + 'px'
+  }">
     <li v-for="(menu, index) in menus" :key="menu.name">
       <router-link class="menu-link" :to="`${pp}/${menu.path}`" v-if="menu.children.length === 0">
         {{menu.name}}
@@ -11,6 +13,7 @@
         :menus="menu.children"
         :pi="`${pi}-${index + 1}`"
         :pp="`${pp}/${menu.path}`"
+        :depth="depth + 1"
       ></sub-menu>
     </li>
   </div>
@@ -25,9 +28,20 @@ export default {
     menus: Array,
     pi: String,
     pp: String,
+    depth: Number,
   },
   components: {
     SubMenu,
+  },
+  computed: {
+    depthClass() {
+      const { depth } = this;
+      let result = 'depth';
+      for (let i = 1; i <= depth; i += 1) {
+        result += `-level${i}`;
+      }
+      return result;
+    },
   },
 };
 </script>
@@ -37,6 +51,14 @@ export default {
 
   .menu {
     font-size: 18px;
+
+    .depth-level1 {
+      padding-left: 10px + 10px;
+
+      &-level2 {
+        padding-left: 10px + 10px + 10px;
+      }
+    }
 
     li .menu-link,
     li .menu-text {
