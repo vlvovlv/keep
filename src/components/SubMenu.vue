@@ -122,15 +122,17 @@ export default {
       }
     }
   }
+</style>
 
-  /deep/ .non-touch li .menu-link {
-      &:hover {
-        &:before {
-          height: 0;
-        }
-        &:after {
-          width: 100%;
-        }
-      }
+<style lang="less">
+.non-touch li .menu-link {
+  &:hover {
+    &:before {
+      height: 0;
+    }
+    &:after {
+      width: 100%;
+    }
   }
+}
 </style>

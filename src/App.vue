@@ -104,7 +104,7 @@ export default {
   .wiki-container {
     display: flex;
     position: relative;
-    min-height: 555px;
+    min-height: 1000px;
     height: 100%;
 
     .m({
