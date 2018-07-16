@@ -1,5 +1,6 @@
 <template>
   <div class="wiki-content-container">
+    <h1 v-if="showIndex">Hello, world...</h1>
     <transition name="router-anim">
       <router-view></router-view>
     </transition>
@@ -9,6 +10,11 @@
 <script>
 export default {
   name: 'WikiContentContainer',
+  computed: {
+    showIndex() {
+      return this.$route.path === '/';
+    },
+  },
 };
 </script>
 

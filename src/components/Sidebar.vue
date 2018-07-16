@@ -2,7 +2,7 @@
   <div class="wiki-sidebar" :style="{
     display: show ? 'block' : 'none'
   }">
-    <h2>/* Index */</h2>
+    <router-link to="/" @click.native="handleClick"><h2>/* Index */</h2></router-link>
     <div class="split">
       ================================================================================
     </div>
@@ -26,6 +26,11 @@ export default {
   },
   created() {
     this.menus = menus;
+  },
+  methods: {
+    handleClick() {
+      this.$emit('item-clicked');
+    },
   },
 };
 </script>
