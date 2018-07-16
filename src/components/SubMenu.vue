@@ -3,7 +3,12 @@
     paddingLeft: depth * 10 + 'px'
   }">
     <li v-for="(menu, index) in menus" :key="menu.name">
-      <router-link class="menu-link" :to="`${pp}/${menu.path}`" v-if="menu.children.length === 0">
+      <router-link
+        class="menu-link"
+        :to="`${pp}/${menu.path}`"
+        v-if="menu.children.length === 0"
+        @click.native="handleClick()"
+      >
         {{menu.name}}
       </router-link>
       <div class="menu-text" v-else>
@@ -32,6 +37,15 @@ export default {
   },
   components: {
     SubMenu,
+  },
+  methods: {
+    handleClick() {
+      let parent = this.$parent;
+      for (let i = 0; i < this.depth; i += 1) {
+        parent = parent.$parent;
+      }
+      parent.$emit('item-clicked');
+    },
   },
   computed: {
     depthClass() {

@@ -1,5 +1,7 @@
 <template>
-  <div class="wiki-sidebar">
+  <div class="wiki-sidebar" :style="{
+    display: show ? 'block' : 'none'
+  }">
     <h2>/* Index */</h2>
     <div class="split">
       ================================================================================
@@ -16,6 +18,9 @@ import SubMenu from './SubMenu';
 
 export default {
   name: 'WikiSidebar',
+  props: {
+    show: Boolean,
+  },
   components: {
     SubMenu,
   },
@@ -38,7 +43,12 @@ export default {
 
     .m({
       position: fixed;
-      display: none;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: @darker;
+      padding-left: 20px;
+      width: 333px;
     });
 
     h2 {
