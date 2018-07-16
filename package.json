@@ -14,6 +14,11 @@
     "build": "node build/build.js",
     "wikis": "node build/load-wikis/index.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && git add ."
+    }
+  },
   "dependencies": {
     "@vlvovlv/reset.css": "^1.0.0",
     "fs-extra": "^6.0.1",
@@ -55,6 +60,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "globby": "^8.0.1",
     "html-webpack-plugin": "^2.30.1",
+    "husky": "^1.0.0-rc.13",
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
     "less": "^3.5.3",
