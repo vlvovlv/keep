@@ -1,15 +1,11 @@
 <template>
   <div class="wiki-content-container">
     <index-page v-if="showIndex"></index-page>
-    <transition name="router-anim">
-      <div>
-        <router-view></router-view>
-        <div class="last-timestamp">
-          <span class="green">//</span>
-          上次更新时间：{{lastUpdatedAt}}
-        </div>
-      </div>
-    </transition>
+    <router-view></router-view>
+    <div class="last-timestamp">
+      <span class="green">//</span>
+      上次更新时间：{{lastUpdatedAt}}
+    </div>
   </div>
 </template>
 
