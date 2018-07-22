@@ -2,7 +2,13 @@
   <div class="wiki-content-container">
     <index-page v-if="showIndex"></index-page>
     <transition name="router-anim">
-      <router-view></router-view>
+      <div>
+        <router-view></router-view>
+        <div class="last-timestamp">
+          <span class="green">//</span>
+          上次更新时间：{{lastUpdatedAt}}
+        </div>
+      </div>
     </transition>
   </div>
 </template>
@@ -19,6 +25,10 @@ export default {
     showIndex() {
       return this.$route.path === '/';
     },
+    lastUpdatedAt() {
+      const lastUpdatedAt = this.$route.meta;
+      return new Date(parseInt(lastUpdatedAt, 10)).toLocaleString('zh-CN');
+    },
   },
 };
 </script>
@@ -31,5 +41,13 @@ export default {
     margin: 0 auto;
     padding: 40px 15px;
     color: @white;
+  }
+
+  .last-timestamp {
+    border-top: 1px dashed @green;
+    border-bottom: 1px dashed @green;
+    padding: 10px 0;
+    margin: 40px 0;
+    text-align: right;
   }
 </style>

@@ -1,3 +1,6 @@
+const {
+  getGitLastUpdatedTimeStamp,
+} = require('./utils');
 const start = 'const menus = [';
 
 const end = `
@@ -12,13 +15,20 @@ function gen (routes, indentNo) {
   indentNo += 1;
   let indent = Array(indentNo).fill('  ').join('');
   routes.forEach((route) => {
+    const filePath = `../../wikis/${route.component}`;
+    let lastUpdatedAt = 0;
+    if (route.component) {
+      lastUpdatedAt = getGitLastUpdatedTimeStamp(filePath);
+    }
+
     routesStr = routesStr + `
 ${indent}{
 ${indent}  name: '${route.name}',
 ${indent}  path: '${route.path}',
+${indent}  meta: '${lastUpdatedAt}',
 ${
   route.component
-  ? indent + '  component: () => import(\'../../wikis/' + route.component + '\'),'
+  ? indent + '  component: () => import(\'' + filePath + '\'),'
   : indent + `  component: { template: '<router-view></router-view>' },`
 }
 ${indent}  children: [
@@ -38,7 +48,7 @@ function gencontent (routes, parentPath) {
   let content = '';
   routes.forEach((item) => {
     const path = parentPath + '/' + item.path;
-    if (!(item.children && item.children.length)) {
+    if (item.component) {
       content += `* [${item.name}](${path})\n`;
     } else {
       content += gencontent(item.children, path);

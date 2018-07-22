@@ -1,4 +1,6 @@
 const slugify = require('transliteration').slugify;
+const spawn = require('cross-spawn');
+const path = require('path');
 
 exports.sort = function (arr) {
   return arr.sort((a, b) => {
@@ -47,3 +49,8 @@ function flat (tree) {
 }
 
 exports.flat = flat;
+
+exports.getGitLastUpdatedTimeStamp = function (filepath) {
+  filepath = path.join(__dirname, filepath);
+  return parseInt(spawn.sync('git', ['log', '-1', '--format=%ct', filepath]).stdout.toString('utf-8')) * 1000;
+}
