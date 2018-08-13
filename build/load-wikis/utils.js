@@ -52,5 +52,5 @@ exports.flat = flat;
 
 exports.getGitLastUpdatedTimeStamp = function (filepath) {
   filepath = path.join(__dirname, filepath);
-  return parseInt(spawn.sync('git', ['log', '-1', '--format=%ct', filepath]).stdout.toString('utf-8')) * 1000;
+  return parseInt(spawn.sync('git', ['log', '-1', '--format=%ct', filepath]).stdout.toString('utf-8') || new Date().getTime()) * 1000;
 }
