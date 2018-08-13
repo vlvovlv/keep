@@ -51,7 +51,7 @@ const menus = [
       {
         name: 'zsh  与 nvm 的集成',
         path: 'zsh-yu-nvm-de-ji-cheng',
-        meta: 'NaN',
+        meta: '1534152233000',
         component: () => import('../../wikis/Shell/zsh  与 nvm 的集成.md'),
         children: [
           
