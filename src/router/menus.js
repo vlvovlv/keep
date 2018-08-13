@@ -42,6 +42,23 @@ const menus = [
       },
     ],
   },
+  {
+    name: 'Shell',
+    path: 'shell',
+    meta: '0',
+    component: { template: '<router-view></router-view>' },
+    children: [
+      {
+        name: 'zsh  与 nvm 的集成',
+        path: 'zsh-yu-nvm-de-ji-cheng',
+        meta: 'NaN',
+        component: () => import('../../wikis/Shell/zsh  与 nvm 的集成.md'),
+        children: [
+          
+        ],
+      },
+    ],
+  },
 ];
 
 export default menus;
