@@ -1,5 +1,22 @@
 const menus = [
   {
+    name: 'CSS',
+    path: 'css',
+    meta: '0',
+    component: { template: '<router-view></router-view>' },
+    children: [
+      {
+        name: 'Less 的 mixin 中参数当做 left hand value 时的写法',
+        path: 'less-de-mixin-zhong-can-shu-dang-zuo-left-hand-value-shi-de-xie-fa',
+        meta: '1534236410000',
+        component: () => import('../../wikis/CSS/Less 的 mixin 中参数当做 left hand value 时的写法.md'),
+        children: [
+          
+        ],
+      },
+    ],
+  },
+  {
     name: 'Git',
     path: 'git',
     meta: '0',
