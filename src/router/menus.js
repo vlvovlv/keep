@@ -8,7 +8,7 @@ const menus = [
       {
         name: 'Less 的 mixin 中参数当做 left hand value 时的写法',
         path: 'less-de-mixin-zhong-can-shu-dang-zuo-left-hand-value-shi-de-xie-fa',
-        meta: '1534236410000',
+        meta: '1534236464000',
         component: () => import('../../wikis/CSS/Less 的 mixin 中参数当做 left hand value 时的写法.md'),
         children: [
           
@@ -32,10 +32,10 @@ const menus = [
         ],
       },
       {
-        name: '子模块',
-        path: 'zi-mo-kuai',
-        meta: '1532242255000',
-        component: () => import('../../wikis/Git/子模块.md'),
+        name: '更新 git 子模块',
+        path: 'geng-xin-git-zi-mo-kuai',
+        meta: '1534308082000',
+        component: () => import('../../wikis/Git/更新 git 子模块.md'),
         children: [
           
         ],

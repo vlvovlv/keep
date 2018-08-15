@@ -2,7 +2,7 @@
   <div class="wiki-content-container">
     <index-page v-if="showIndex"></index-page>
     <router-view></router-view>
-    <div class="last-timestamp">
+    <div class="last-timestamp" v-if="!showIndex">
       <span class="green">//</span>
       上次更新时间：{{lastUpdatedAt}}
     </div>
