@@ -14,6 +14,15 @@ const menus = [
           
         ],
       },
+      {
+        name: 'transform 会影响 position:fixed 的定位效果',
+        path: 'transform-hui-ying-xiang-position-fixed-de-ding-wei-xiao-guo',
+        meta: '1534991407000',
+        component: () => import('../../wikis/CSS/transform 会影响 position:fixed 的定位效果.md'),
+        children: [
+          
+        ],
+      },
     ],
   },
   {
@@ -34,7 +43,7 @@ const menus = [
       {
         name: '更新 git 子模块',
         path: 'geng-xin-git-zi-mo-kuai',
-        meta: '1534308082000',
+        meta: '1534308123000',
         component: () => import('../../wikis/Git/更新 git 子模块.md'),
         children: [
           
@@ -70,6 +79,49 @@ const menus = [
         path: 'zsh-yu-nvm-de-ji-cheng',
         meta: '1534152233000',
         component: () => import('../../wikis/Shell/zsh  与 nvm 的集成.md'),
+        children: [
+          
+        ],
+      },
+      {
+        name: '查看 crontab 日志',
+        path: 'cha-kan-crontab-ri-zhi',
+        meta: '1534580167000',
+        component: () => import('../../wikis/Shell/查看 crontab 日志.md'),
+        children: [
+          
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Tmux',
+    path: 'tmux',
+    meta: '0',
+    component: { template: '<router-view></router-view>' },
+    children: [
+      {
+        name: 'tmux 操作说明',
+        path: 'tmux-cao-zuo-shuo-ming',
+        meta: '1534991407000',
+        component: () => import('../../wikis/Tmux/tmux 操作说明.md'),
+        children: [
+          
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Vim',
+    path: 'vim',
+    meta: '0',
+    component: { template: '<router-view></router-view>' },
+    children: [
+      {
+        name: 'vim 操作说明',
+        path: 'vim-cao-zuo-shuo-ming',
+        meta: '1534991407000',
+        component: () => import('../../wikis/Vim/vim 操作说明.md'),
         children: [
           
         ],
