@@ -103,7 +103,7 @@ const menus = [
       {
         name: 'tmux 操作说明',
         path: 'tmux-cao-zuo-shuo-ming',
-        meta: '1534991407000',
+        meta: '1535004152000',
         component: () => import('../../wikis/Tmux/tmux 操作说明.md'),
         children: [
           
@@ -120,7 +120,7 @@ const menus = [
       {
         name: 'vim 操作说明',
         path: 'vim-cao-zuo-shuo-ming',
-        meta: '1534991407000',
+        meta: '1535004152000',
         component: () => import('../../wikis/Vim/vim 操作说明.md'),
         children: [
           
