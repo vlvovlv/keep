@@ -17,7 +17,7 @@ const menus = [
       {
         name: 'transform 会影响 position:fixed 的定位效果',
         path: 'transform-hui-ying-xiang-position-fixed-de-ding-wei-xiao-guo',
-        meta: '1534991407000',
+        meta: '1535017079000',
         component: () => import('../../wikis/CSS/transform 会影响 position:fixed 的定位效果.md'),
         children: [
           
@@ -122,6 +122,23 @@ const menus = [
         path: 'vim-cao-zuo-shuo-ming',
         meta: '1535004152000',
         component: () => import('../../wikis/Vim/vim 操作说明.md'),
+        children: [
+          
+        ],
+      },
+    ],
+  },
+  {
+    name: 'npm',
+    path: 'npm',
+    meta: '0',
+    component: { template: '<router-view></router-view>' },
+    children: [
+      {
+        name: '禁止生成package-lock',
+        path: 'jin-zhi-sheng-cheng-package-lock',
+        meta: '1537155137000',
+        component: () => import('../../wikis/npm/禁止生成package-lock.md'),
         children: [
           
         ],

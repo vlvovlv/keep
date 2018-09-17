@@ -1,6 +1,6 @@
-| 1 | 2 | 3 | 4 | 5 | 6 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| [CSS](#css) | [Git](#git) | [JavaScript](#javascript) | [Shell](#shell) | [Tmux](#tmux) | [Vim](#vim) |
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| [CSS](#css) | [Git](#git) | [JavaScript](#javascript) | [Shell](#shell) | [Tmux](#tmux) | [Vim](#vim) | [npm](#npm) |
 ## [CSS](#css)
 * [Less 的 mixin 中参数当做 left hand value 时的写法](css/less-de-mixin-zhong-can-shu-dang-zuo-left-hand-value-shi-de-xie-fa)
 * [transform 会影响 position:fixed 的定位效果](css/transform-hui-ying-xiang-position-fixed-de-ding-wei-xiao-guo)
@@ -21,4 +21,7 @@
 
 ## [Vim](#vim)
 * [vim 操作说明](vim/vim-cao-zuo-shuo-ming)
+
+## [npm](#npm)
+* [禁止生成package-lock](npm/jin-zhi-sheng-cheng-package-lock)
 
